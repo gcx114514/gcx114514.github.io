@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>致你的生日信</title>
+    <link href="/2026/06/24/zyqsr-md/"/>
+    <url>/2026/06/24/zyqsr-md/</url>
+    
+    <content type="html"><![CDATA[<style>/* 全局页面，使用你的浅金水墨生日图做背景 */.post-content {  text-align: center;  padding: 40px 15px;  min-height: 90vh;  background: url("/img/birth-bg.jpg") no-repeat center center;  background-size: cover;  background-attachment: fixed;}/* 圆形头像框 */.avatar-box {  width: 160px;  height: 160px;  margin: 0 auto 35px;  border-radius: 50%;  overflow: hidden;  border: 3px solid #d4b888;}.avatar-box img {  width: 100%;  height: 100%;  object-fit: cover;}/* 主标题 手写花体样式，匹配图片字体 */.birth-top-title {  font-size: 4rem;  font-family: Georgia, cursive;  color: #442c1c;  margin: 10px 0 6px;  letter-spacing: 4px;  visibility: hidden;}.birth-subtitle {  font-size: 1.3rem;  color: #553a28;  opacity: 0.8;  margin-bottom: 30px;  letter-spacing: 2px;  visibility: hidden;}/* 祝福文字半透框，适配米色水墨背景 */.wish-text-box {  margin-top: 50px;  line-height: 2.4;  font-size: 1.15rem;  color: #332216;  padding: 28px 32px;  border-radius: 18px;  background: rgba(255,255,255,0.45);  backdrop-filter: blur(8px);}.wish-text-box p {  margin: 14px 0;  visibility: hidden;}/* 落款靠右，距离右侧留出空隙 */.line-right {  text-align: right !important;  margin-top: 20px !important;  padding-right: 300px !important;}/* 打字机闪烁光标 */.cursor {  display: inline-block;  width: 3px;  height: 1.4em;  background: #6b4a33;  margin-left: 4px;  animation: blink 0.8s infinite;}@keyframes blink {  0%, 100% { opacity: 1; }  50% { opacity: 0; }}</style><!-- 同学头像 --><div class="avatar-box"><img src="/img/avatar.png" alt="头像"></div><h1 class="birth-top-title" id="titleText"></h1><p class="birth-subtitle" id="subText"></p><div class="wish-text-box"><p id="line1"></p><p id="line2"></p><p id="line3"></p><p id="line4"></p><p id="line5" class="line-right"></p></div><script>// 手写逐字打字核心函数，模拟一笔一划书写浮现function typeWriter(elId, text, writeSpeed, nextCallback) {  const element = document.getElementById(elId);  element.style.visibility = "visible";  let charIndex = 0;  function writeLetter() {    if (charIndex < text.length) {      // 逐字拼接+闪烁光标，模拟手写书写过程      element.innerHTML = text.slice(0, charIndex + 1) + `<span class="cursor"></span>`;      charIndex++;      setTimeout(writeLetter, writeSpeed);    } else {      // 文字全部写完，移除光标      element.innerHTML = text;      if (nextCallback) nextCallback();    }  }  writeLetter();}// 页面加载后，从上到下依次手写浮现所有文字window.addEventListener("load", () => {  // 主标题匹配图片 Happy B-day 手写文字  typeWriter("titleText", "Happy Birthday", 90, () => {    typeWriter("subText", "To 小赵：", 100, () => {      typeWriter("line1", "愿你永远眉眼带笑，自在温柔", 80, () => {        typeWriter("line2", "沿途遇见的所有美好，都为你停留", 80, () => {          typeWriter("line3", "往后岁岁，清风相伴，平安无忧", 80, () => {            typeWriter("line4", "心中热爱永不褪色，前路皆是光亮", 80, () => {              typeWriter("line5", "——gcx", 130);            });          });        });      });    });  });});</script>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>生日祝福</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2026/06/06/hello-world/"/>
     <url>/2026/06/06/hello-world/</url>
