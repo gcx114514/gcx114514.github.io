@@ -8,7 +8,7 @@
     <link href="/2026/06/06/gcx/"/>
     <url>/2026/06/06/gcx/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"     data-hbe-format="4"     data-wpm="Oh, this is an invalid password. Check and try again, please."     data-whm="Oh, this is an invalid password. Check and try again, please."     data-salt="54c5d9eb3390c95d6d141990a1b70442a75bb38571aa9e2f94c5e6ed349b9e59"     data-nonce="635f28d6021810fa9cbdf09d"     data-kdf-iterations="250000"     data-auto-save="false">  <script id="hbeData" type="hbeData">    eaee28c17c39cfe0c6fe5d5b43a6a931  </script>  <div class="hbe hbe-content">    <form id="hbeForm" class="hbe hbe-form" onsubmit="return false">      <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>      <button class="hbe hbe-button" type="submit">Decrypt</button>      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>    </form>  </div></div><script data-pjax src="/lib/hbe.9e70f1e1d2.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     
