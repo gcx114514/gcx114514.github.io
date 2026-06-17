@@ -22,7 +22,7 @@
     <meta name="description" content="首先我们发现在一个区间的左边或者右边的合法个数是两个互不干扰的、等价的东西，那么我们只需要考虑一边即可。那么这里只讨论左边的情况。 考虑将区间按照右端点从小到大排序扫描线（假设当前扫到 iii，要处理的是线段 xxx 的答案），用一棵线段树或者树状数组维护右端点在 iii 之后的区间的左端点出现在哪些位置，那么注意到对于 xxx 来说，那些左端点小于 xxx 的左端点的线段一定是包含了这个 xxx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF2042D">
-<meta property="og:url" content="http://example.com/2024/12/13/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/index.html">
+<meta property="og:url" content="http://gcx114514.github.io/2024/12/13/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/index.html">
 <meta property="og:site_name" content="gcx">
 <meta property="og:description" content="首先我们发现在一个区间的左边或者右边的合法个数是两个互不干扰的、等价的东西，那么我们只需要考虑一边即可。那么这里只讨论左边的情况。 考虑将区间按照右端点从小到大排序扫描线（假设当前扫到 iii，要处理的是线段 xxx 的答案），用一棵线段树或者树状数组维护右端点在 iii 之后的区间的左端点出现在哪些位置，那么注意到对于 xxx 来说，那些左端点小于 xxx 的左端点的线段一定是包含了这个 xxx">
 <meta property="og:locale" content="zh_CN">
@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"gcx114514.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -458,7 +458,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>CF2042D</div>
-      <div>http://example.com/2024/12/13/题解：CF2042D Recommendations/</div>
+      <div>http://gcx114514.github.io/2024/12/13/题解：CF2042D Recommendations/</div>
     </div>
     <div class="license-meta">
       

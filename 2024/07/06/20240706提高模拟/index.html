@@ -22,7 +22,7 @@
     <meta name="description" content="T2 若将连续的0和1分别缩成一个块 对于一行要本质不同，那么删除的一定不在同一块中，考虑dp 设dp[i][j]表示考虑前i行，第i行删第j个的全部（去重）方案数 如果在同一个块中，前面一个之比后一个多一个转移 于是设f[i][j]表示第i行删j比删j+1多的转移 故有转移方程（设a[i][j]表示第i行第j个值）： dpi,j&#x3D;∑z&#x3D;min(j+k,m)max(j−k,1)dpi−1,z[ai">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20240706提高模拟">
-<meta property="og:url" content="http://example.com/2024/07/06/20240706%E6%8F%90%E9%AB%98%E6%A8%A1%E6%8B%9F/index.html">
+<meta property="og:url" content="http://gcx114514.github.io/2024/07/06/20240706%E6%8F%90%E9%AB%98%E6%A8%A1%E6%8B%9F/index.html">
 <meta property="og:site_name" content="gcx">
 <meta property="og:description" content="T2 若将连续的0和1分别缩成一个块 对于一行要本质不同，那么删除的一定不在同一块中，考虑dp 设dp[i][j]表示考虑前i行，第i行删第j个的全部（去重）方案数 如果在同一个块中，前面一个之比后一个多一个转移 于是设f[i][j]表示第i行删j比删j+1多的转移 故有转移方程（设a[i][j]表示第i行第j个值）： dpi,j&#x3D;∑z&#x3D;min(j+k,m)max(j−k,1)dpi−1,z[ai">
 <meta property="og:locale" content="zh_CN">
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"gcx114514.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -468,7 +468,7 @@ sum[i][j]表示第i行到第j个的前缀和</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>20240706提高模拟</div>
-      <div>http://example.com/2024/07/06/20240706提高模拟/</div>
+      <div>http://gcx114514.github.io/2024/07/06/20240706提高模拟/</div>
     </div>
     <div class="license-meta">
       

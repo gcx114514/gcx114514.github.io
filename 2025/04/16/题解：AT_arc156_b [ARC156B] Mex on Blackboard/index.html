@@ -22,15 +22,15 @@
     <meta name="description" content="感觉上比 A 题简单。 我们考虑枚举后面 kkk 次操作加入的最大值为 iii，那么我们发现，对于原集合中没有的且小于 iii 的数都加入过才能加入 iii，这些数我们是很好计算的，假设数量为 mmm。现在我们还剩下 k−mk-mk−m 次操作，而且我们已经限制了最大值，所以剩下的操作只能在 [0,i][0,i][0,i] 中选择，这样就转换成将 k−mk-mk−m 个不区分小球放到 i+1i+1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARC156_b">
-<meta property="og:url" content="http://example.com/2025/04/16/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20[ARC156B]%20Mex%20on%20Blackboard/index.html">
+<meta property="og:url" content="http://gcx114514.github.io/2025/04/16/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20[ARC156B]%20Mex%20on%20Blackboard/index.html">
 <meta property="og:site_name" content="gcx">
 <meta property="og:description" content="感觉上比 A 题简单。 我们考虑枚举后面 kkk 次操作加入的最大值为 iii，那么我们发现，对于原集合中没有的且小于 iii 的数都加入过才能加入 iii，这些数我们是很好计算的，假设数量为 mmm。现在我们还剩下 k−mk-mk−m 次操作，而且我们已经限制了最大值，所以剩下的操作只能在 [0,i][0,i][0,i] 中选择，这样就转换成将 k−mk-mk−m 个不区分小球放到 i+1i+1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-16T07:37:00.000Z">
 <meta property="article:modified_time" content="2026-06-17T15:11:08.485Z">
 <meta property="article:author" content="gcx">
-<meta property="article:tag" content="题解">
 <meta property="article:tag" content="Atcoder">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"gcx114514.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -441,9 +441,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%A2%98%E8%A7%A3/" class="print-no-link">#题解</a>
-      
         <a href="/tags/Atcoder/" class="print-no-link">#Atcoder</a>
+      
+        <a href="/tags/%E9%A2%98%E8%A7%A3/" class="print-no-link">#题解</a>
       
     </div>
   
@@ -456,7 +456,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>ARC156_b</div>
-      <div>http://example.com/2025/04/16/题解：AT_arc156_b [ARC156B] Mex on Blackboard/</div>
+      <div>http://gcx114514.github.io/2025/04/16/题解：AT_arc156_b [ARC156B] Mex on Blackboard/</div>
     </div>
     <div class="license-meta">
       

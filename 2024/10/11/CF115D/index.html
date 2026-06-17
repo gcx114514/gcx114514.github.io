@@ -22,7 +22,7 @@
     <meta name="description" content="模拟赛考了，感觉不能评黑 暴力DP 首先，相邻的两个数必定在一起，可以缩了。 我们有一个很显然的 O(n3)O(n^3)O(n3) dp，就是设 dpi,jdp_{i,j}dpi,j​ 表示区间 [i,j][i,j][i,j] 的方案数，显然有如下转移（ai&#x3D;1a_i&#x3D;1ai​&#x3D;1 表示是数字）： dpl,r&#x3D;∑i&#x3D;l+1r−1dpl,i−1×dpi+1,r[ai≠1] dp_{l,r}&#x3D;\sum">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF115D">
-<meta property="og:url" content="http://example.com/2024/10/11/CF115D/index.html">
+<meta property="og:url" content="http://gcx114514.github.io/2024/10/11/CF115D/index.html">
 <meta property="og:site_name" content="gcx">
 <meta property="og:description" content="模拟赛考了，感觉不能评黑 暴力DP 首先，相邻的两个数必定在一起，可以缩了。 我们有一个很显然的 O(n3)O(n^3)O(n3) dp，就是设 dpi,jdp_{i,j}dpi,j​ 表示区间 [i,j][i,j][i,j] 的方案数，显然有如下转移（ai&#x3D;1a_i&#x3D;1ai​&#x3D;1 表示是数字）： dpl,r&#x3D;∑i&#x3D;l+1r−1dpl,i−1×dpi+1,r[ai≠1] dp_{l,r}&#x3D;\sum">
 <meta property="og:locale" content="zh_CN">
@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"gcx114514.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -473,7 +473,7 @@ dp_{l,r}=\sum_{i=l+1}^{r-1}dp_{l,i-1}\times dp_{i+1,r}[a_i\neq 1]
   <div class="license-box my-3">
     <div class="license-title">
       <div>CF115D</div>
-      <div>http://example.com/2024/10/11/CF115D/</div>
+      <div>http://gcx114514.github.io/2024/10/11/CF115D/</div>
     </div>
     <div class="license-meta">
       
