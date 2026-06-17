@@ -352,15 +352,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9AP10214%20%5BCTS2024%5D%20%E6%8A%95%E7%A5%A8%E6%B8%B8%E6%88%8F/" target="_self">
-          
+        <a href="/2025/05/04/DS%E8%AE%B0%E5%BD%95/" target="_self">
+          数据结构
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9AP10214%20%5BCTS2024%5D%20%E6%8A%95%E7%A5%A8%E6%B8%B8%E6%88%8F/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/05/04/DS%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
-          很有意思的黑题，每一步都很自然。 思路 首先考虑然后比较两个点的删除时间，可以发现可以通过比较两个点删除时的票数来进行比较我们设 dp[i]dp[i]dp[i] 表示点 iii 被删除时的票数， 那么如果 dp[x]&gt;dp[y]dp[x]&gt;dp[y]dp[x]&gt;dp[y] 或者 dp[x]=dp[y]dp[x]=dp[y]dp[x]=dp[y] 且 x&gt;yx&gt;yx&g
+          P4119 [Ynoi2018] 未来日记 注：默认值域和序列长度均为 nnn，BBB 表示块长。 对序列和值域分别分块，然后对序列的每个块i记录：cnt[val][i],pos[v][i]cnt[val][i],pos[v][i]cnt[val][i],pos[v][i] 分别表示：   序列前i个块中在值域 valvalval 这个块中的出现元素个数之和   序列前i个块中出现的 vvv 的次
         </div>
       </a>
 
@@ -368,12 +368,49 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2025-05-04 19:24" pubdate>
+              2025-05-04
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/DS/" class="category-chain-item">DS</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>
+            
+              <a href="/tags/DS/">#DS</a>
+            
+          </div>
         
       </div>
     </article>
@@ -385,112 +422,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2046C%20Adventurers/" target="_self">
-          
+        <a href="/2025/04/16/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20%5BARC156B%5D%20Mex%20on%20Blackboard/" target="_self">
+          ARC156_b
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2046C%20Adventurers/" target="_self">
-        <div>
-          首先我们发现对关键点的坐标离散化是不会有问题的，但是最后选取的点不一定在关键点上（被这个卡了好久）。 那么我们考虑用两个树状数组同时从左到右进行扫描（当前扫描到 iii），假设 t1t_1t1​ 维护的是横坐标小于 iii 的，而 t2t_2t2​ 维护的是横坐标大于等于 iii 的。 考虑如何计算当前横坐标的最优值，我们先考虑枚举纵坐标，可以发现随着纵坐标的增大在其上方点的个数也会增加（这好像是
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/" target="_self">
-          
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/" target="_self">
-        <div>
-          首先我们发现在一个区间的左边或者右边的合法个数是两个互不干扰的、等价的东西，那么我们只需要考虑一边即可。那么这里只讨论左边的情况。 考虑将区间按照右端点从小到大排序扫描线（假设当前扫到 iii，要处理的是线段 xxx 的答案），用一棵线段树或者树状数组维护右端点在 iii 之后的区间的左端点出现在哪些位置，那么注意到对于 xxx 来说，那些左端点小于 xxx 的左端点的线段一定是包含了这个 xxx
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF677D%20Vanya%20and%20Treasure/" target="_self">
-          
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9ACF677D%20Vanya%20and%20Treasure/" target="_self">
-        <div>
-          首先我们发现这有着明显的分层图的结构，因为只有更新完 val&lt;ival&lt; ival&lt;i 的才会更新 val=ival=ival=i 的，那么我们考虑如何通过第 i−1i-1i−1 层的结果来更新第 iii 层的结果。 可以发现转移到一个点可以通过拆掉绝对值分为 444 类， 依次为该点的左上、右上、左下和右下。这个讨论很简单。 现在已经分成了四个部分，显然是可以树套树得到一个 O
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20%5BARC156B%5D%20Mex%20on%20Blackboard/" target="_self">
-          
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20%5BARC156B%5D%20Mex%20on%20Blackboard/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/16/%E9%A2%98%E8%A7%A3%EF%BC%9AAT_arc156_b%20%5BARC156B%5D%20Mex%20on%20Blackboard/" target="_self">
         <div>
           感觉上比 A 题简单。 我们考虑枚举后面 kkk 次操作加入的最大值为 iii，那么我们发现，对于原集合中没有的且小于 iii 的数都加入过才能加入 iii，这些数我们是很好计算的，假设数量为 mmm。现在我们还剩下 k−mk-mk−m 次操作，而且我们已经限制了最大值，所以剩下的操作只能在 [0,i][0,i][0,i] 中选择，这样就转换成将 k−mk-mk−m 个不区分小球放到 i+1i+1
         </div>
@@ -500,12 +438,49 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2025-04-16 15:37" pubdate>
+              2025-04-16
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/Atcoder/" class="category-chain-item">Atcoder</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/Atcoder/">#Atcoder</a>
+            
+          </div>
         
       </div>
     </article>
@@ -517,15 +492,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/%E6%95%B0%E5%AD%A6%E8%AE%B0%E5%BD%952/" target="_self">
-          
+        <a href="/2025/02/28/%E3%80%902012%E9%9B%86%E8%AE%AD%E9%A1%BE%E6%98%B1%E6%B4%B2%E3%80%91JZPKIL/" target="_self">
+          【2012集训顾昱洲】JZPKIL
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/%E6%95%B0%E5%AD%A6%E8%AE%B0%E5%BD%952/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/02/28/%E3%80%902012%E9%9B%86%E8%AE%AD%E9%A1%BE%E6%98%B1%E6%B4%B2%E3%80%91JZPKIL/" target="_self">
         <div>
-          P4389 付公主的背包 首先对于一个体积为 VVV 物品可以很轻易的求出其生成函数： FV(x)=∑i≥0[i%V=0]xi=11−xV F_V(x)=\sum_{i\geq 0}[i\%V=0]x^i=\frac{1}{1-x^V} FV​(x)=i≥0∑​[i%V=0]xi=1−xV1​ 所以最后的答案是 ： [xm]∏i=1nFai(x) [x^m]\prod_{i=1}^nF_{a_i}
+          fxy(n)=∑i=1n(i,n)x[i,n]y=∑i=1n(in)y(i,n)x−y=ny∑i=1niy(i,n)x−y=ny∑d∣ndx−y∑k=1n[gcd⁡(n,k)==d]ky=ny∑d∣ndx−y∑k=1nd[gcd⁡(nd,k)==1](kd)y=ny∑d∣ndx∑k=1nd[gcd⁡(nd,k)==1]ky=ny∑d∣ndxgy(nd) f_{xy}(n)=\sum_{i=1}^n
         </div>
       </a>
 
@@ -533,12 +508,49 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2025-02-28 19:58" pubdate>
+              2025-02-28
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/" class="category-chain-item">数学</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+            
+          </div>
         
       </div>
     </article>
@@ -550,15 +562,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/SCCPC%202025/" target="_self">
-          
+        <a href="/2025/02/11/%E9%A2%98%E8%A7%A3%EF%BC%9AP11066%20%E3%80%90MX-X4-T6%E3%80%91%E3%80%8CJason-1%E3%80%8D%E7%94%B5%E6%A2%AF/" target="_self">
+          P11066
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/SCCPC%202025/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/02/11/%E9%A2%98%E8%A7%A3%EF%BC%9AP11066%20%E3%80%90MX-X4-T6%E3%80%91%E3%80%8CJason-1%E3%80%8D%E7%94%B5%E6%A2%AF/" target="_self">
         <div>
-          Day -？ 接到打 SCCPC 的通知，学校组了三个队，和 鲤鱼江（后面写作 lyj）、aulive（后面写作 xht），结果打 CCPC 最难的问题竟然是取队名？ 疯狂询问 deepseek 并征求队长 lyj 意见得到队名：焰色编译少女。（一直以为是焰色编程少女/ll。） Day 0 一大早出发去乐山，高铁上 xht 和 lyj 一直在玩哈迪斯，感觉有意思。 到了酒店，好像叫什么什么江景酒店
+          一道有意思的题，感谢 jason_sun 为解法提供的思路。 首先对于第一个子任务，我们可以直接打表。 对于第二个子任务，我们发现每次询问至少有 mmm 个连续的后缀是空的，那么我们考虑先在这些空的位置上将电梯按照相对顺序排列好。那么我们在 000 直接从右往左扫一遍进行操作，后面等他们到位后在移动过来即可，这样第一遍扫和移动均要 mmm 次操作，然后每次移动的最远距离是 nnn，所以最多会等待
         </div>
       </a>
 
@@ -566,12 +578,49 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2025-02-11 19:36" pubdate>
+              2025-02-11
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/Luogu/" class="category-chain-item">Luogu</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/Luogu/">#Luogu</a>
+            
+          </div>
         
       </div>
     </article>
@@ -583,15 +632,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/P10309/" target="_self">
-          
+        <a href="/2024/12/31/%E9%87%91%E5%B0%86%E5%86%9B%E4%BC%A0%E5%A5%87/" target="_self">
+          金将军传奇
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/P10309/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/12/31/%E9%87%91%E5%B0%86%E5%86%9B%E4%BC%A0%E5%A5%87/" target="_self">
         <div>
-          题目分析 可以知道 E=∑i=1nmaxj=1ndis(i,j)nE=\frac{\sum_{i=1}^{n}max_{j=1}^ndis(i,j)}{n}E=n∑i=1n​maxj=1n​dis(i,j)​ 那么将 (E×n) mod 998244353(E \times n) \ mod \ 998244353(E×n) mod 998244353 就是 sumi=1nmaxj=1ndis(i
+          序幕：府中豪言  幕启，雕梁画栋的将军府中华，堂前庭院两侧架放着十八般兵器，堂中装裱有各种名贵书画，几案上放的是上好的笔墨纸砚，桌椅等皆为金丝楠木制成，夺宝格上摆着五湖四海的奇珍异宝，披挂着的铠甲与镶金鳞，辉光熠熠。抬起头看 &quot;金将军府&quot;四个大字赫然，此时，一人影于屏风后走来。  金将军（徐徐踏出）：唉，四川是个好地方，我的大粮仓，家家户户种军粮，金铁全来铸刀枪。百姓个个服兵役
         </div>
       </a>
 
@@ -599,12 +648,47 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2024-12-31 19:58" pubdate>
+              2024-12-31
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E5%8C%96%E8%AF%BE/" class="category-chain-item">文化课</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%96%87%E5%8C%96%E8%AF%BE/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+            
+          </div>
         
       </div>
     </article>
@@ -616,15 +700,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/P5504%20%5BJSOI2011%5D%20%E6%9F%A0%E6%AA%AC/" target="_self">
-          
+        <a href="/2024/12/21/%E4%BA%8C%E5%85%83%E7%8E%AF%E8%AE%A1%E6%95%B0/" target="_self">
+          二元环计数
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/P5504%20%5BJSOI2011%5D%20%E6%9F%A0%E6%AA%AC/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/12/21/%E4%BA%8C%E5%85%83%E7%8E%AF%E8%AE%A1%E6%95%B0/" target="_self">
         <div>
-          设 dpidp_idpi​ 表示考虑前 iii 位的贝壳的得到的最大柠檬数，那么有暴力转移： （viv_ivi​ 表示当期位置的贝壳颜色，sumi,xsum_{i,x} sumi,x​ 表示前 iii 个数中 xxx 的出现次数） dpi=max⁡j=1idpj−1+vi×(sumi,x−sumj,x+1)2 dp_{i}=\max_{j=1}^i dp_{j-1}+v_i\times(sum_{
+          首先我们注意到这里构成的是一个二分图，然后又求的是二元环，显然就是计数有序二元组 (i,j)(i,j)(i,j) 满足：左边第 iii 号点向右边第 jjj 号点连接了边，并且右边第 jjj 号点向左边第 iii 号点连接了边。 首先对于前 333 个 subtask 我们可以直接暴力建边，然后枚举左右两边的点判断是否有环的形成即可，复杂度 O(n2)O(n^2)O(n2)，期望得分 303030
         </div>
       </a>
 
@@ -632,12 +716,49 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2024-12-21 16:11" pubdate>
+              2024-12-21
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
+            
+          </div>
         
       </div>
     </article>
@@ -649,15 +770,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2026/06/17/P4128%20%5BSHOI2006%5D%20%E6%9C%89%E8%89%B2%E5%9B%BE/" target="_self">
-          
+        <a href="/2024/12/14/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2046C%20Adventurers/" target="_self">
+          CF2046C
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/17/P4128%20%5BSHOI2006%5D%20%E6%9C%89%E8%89%B2%E5%9B%BE/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/12/14/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2046C%20Adventurers/" target="_self">
         <div>
-          P4128 [SHOI2006] 有色图 前置知识 BurnsideBurnsideBurnside 引理： ∣X/G∣=1∣G∣∑g∈G∣Xg∣ |X/G|=\frac{1}{|G|}\sum_{g\in G}|X^g|\\ ∣X/G∣=∣G∣1​g∈G∑​∣Xg∣ ∣X/G∣|X/G|∣X/G∣ 是群 GGG 作用在集合 XXX 的轨道。 XgX^gXg 是 ggg 作用在 XXX 上的不变的
+          首先我们发现对关键点的坐标离散化是不会有问题的，但是最后选取的点不一定在关键点上（被这个卡了好久）。 那么我们考虑用两个树状数组同时从左到右进行扫描（当前扫描到 iii），假设 t1t_1t1​ 维护的是横坐标小于 iii 的，而 t2t_2t2​ 维护的是横坐标大于等于 iii 的。 考虑如何计算当前横坐标的最优值，我们先考虑枚举纵坐标，可以发现随着纵坐标的增大在其上方点的个数也会增加（这好像是
         </div>
       </a>
 
@@ -665,12 +786,259 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-17 21:04" pubdate>
-              2026-06-17
+            <time datetime="2024-12-14 16:45" pubdate>
+              2024-12-14
             </time>
           </div>
         
         
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/Codeforces/" class="category-chain-item">Codeforces</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/Codeforces/">#Codeforces</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/12/13/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/" target="_self">
+          CF2042D
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/12/13/%E9%A2%98%E8%A7%A3%EF%BC%9ACF2042D%20Recommendations/" target="_self">
+        <div>
+          首先我们发现在一个区间的左边或者右边的合法个数是两个互不干扰的、等价的东西，那么我们只需要考虑一边即可。那么这里只讨论左边的情况。 考虑将区间按照右端点从小到大排序扫描线（假设当前扫到 iii，要处理的是线段 xxx 的答案），用一棵线段树或者树状数组维护右端点在 iii 之后的区间的左端点出现在哪些位置，那么注意到对于 xxx 来说，那些左端点小于 xxx 的左端点的线段一定是包含了这个 xxx
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-12-13 20:25" pubdate>
+              2024-12-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/Codeforces/" class="category-chain-item">Codeforces</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/Codeforces/">#Codeforces</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/12/01/NOIP2024%20%E6%B8%B8%E8%AE%B0/" target="_self">
+          NOIP2024 游记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/12/01/NOIP2024%20%E6%B8%B8%E8%AE%B0/" target="_self">
+        <div>
+          Day 0 14：30 上车从学校出发，在车上与麻神 Sin_Watt 与 Halberd_Cease 交流了一点技术 （太菜了，被嘲讽了。）坐了三个小时的车才到酒店。晚上还要上自习。 21：30 自习结束到房间吃宵夜，顺便和小度进行了深入交流。 22：40 熄灯睡觉。 Day 1 8：00 进入考场，开始打缺省源。听取了popossible 和 Halberd_Cease 的建议没有打 modi
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-12-01 15:00" pubdate>
+              2024-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/%E6%B8%B8%E8%AE%B0/" class="category-chain-item">游记</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/">#游记</a>
+            
+              <a href="/tags/NOIP/">#NOIP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/11/21/%E9%A2%98%E8%A7%A3%EF%BC%9AP10214%20%5BCTS2024%5D%20%E6%8A%95%E7%A5%A8%E6%B8%B8%E6%88%8F/" target="_self">
+          P10214
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/11/21/%E9%A2%98%E8%A7%A3%EF%BC%9AP10214%20%5BCTS2024%5D%20%E6%8A%95%E7%A5%A8%E6%B8%B8%E6%88%8F/" target="_self">
+        <div>
+          很有意思的黑题，每一步都很自然。 思路 首先考虑然后比较两个点的删除时间，可以发现可以通过比较两个点删除时的票数来进行比较我们设 dp[i]dp[i]dp[i] 表示点 iii 被删除时的票数， 那么如果 dp[x]&gt;dp[y]dp[x]&gt;dp[y]dp[x]&gt;dp[y] 或者 dp[x]=dp[y]dp[x]=dp[y]dp[x]=dp[y] 且 x&gt;yx&gt;yx&g
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-21 19:36" pubdate>
+              2024-11-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/OI/" class="category-chain-item">OI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/OI/Luogu/" class="category-chain-item">Luogu</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">#题解</a>
+            
+              <a href="/tags/Luogu/">#Luogu</a>
+            
+          </div>
         
       </div>
     </article>
@@ -680,7 +1048,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#board">6</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
