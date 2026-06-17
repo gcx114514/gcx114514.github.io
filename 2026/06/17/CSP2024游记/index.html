@@ -1,0 +1,820 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/gcx123.png">
+  <link rel="icon" href="/img/gcx123.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="gcx">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Day 998244352 学校组织了一场名义上的提高模拟赛，坐牢 4h4h4h，T1数论+DS会不了一点，T4写了假DP，50pts遗憾离场，RP掉光了。 由于刚刚月考，寝室同学过于兴奋，同时由于紧张睡不着，熬到12点才迷迷糊糊的睡过去。这状态，学什么OI？ Day 1 上午 为了保持手感，写了去年的结构体，同时敲着电子木鱼积功德。由于头脑过于不清醒，差点把对齐规则看错，最后连写代调一遍过，花了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gcx">
+<meta property="og:url" content="http://example.com/2026/06/17/CSP2024%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:site_name" content="gcx">
+<meta property="og:description" content="Day 998244352 学校组织了一场名义上的提高模拟赛，坐牢 4h4h4h，T1数论+DS会不了一点，T4写了假DP，50pts遗憾离场，RP掉光了。 由于刚刚月考，寝室同学过于兴奋，同时由于紧张睡不着，熬到12点才迷迷糊糊的睡过去。这状态，学什么OI？ Day 1 上午 为了保持手感，写了去年的结构体，同时敲着电子木鱼积功德。由于头脑过于不清醒，差点把对齐规则看错，最后连写代调一遍过，花了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-17T13:04:56.901Z">
+<meta property="article:modified_time" content="2025-05-24T03:30:20.042Z">
+<meta property="article:author" content="gcx">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>gcx</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>gcx</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-06-17 21:04" pubdate>
+          2026年6月17日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          43 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Day-998244352">Day 998244352</h2>
+<p>学校组织了一场名义上的提高模拟赛，坐牢 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>h</mi></mrow><annotation encoding="application/x-tex">4h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">4</span><span class="mord mathnormal">h</span></span></span></span>，T1数论+DS会不了一点，T4写了假DP，50pts遗憾离场，RP掉光了。</p>
+<p>由于刚刚月考，寝室同学过于兴奋，同时由于紧张睡不着，熬到12点才迷迷糊糊的睡过去。这状态，学什么OI？</p>
+<h2 id="Day-1-上午">Day 1 上午</h2>
+<p>为了保持手感，写了去年的<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9754">结构体</a>，同时敲着电子木鱼积功德。由于头脑过于不清醒，差点把对齐规则看错，最后连写代调一遍过，花了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>h</mi></mrow><annotation encoding="application/x-tex">1h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mord mathnormal">h</span></span></span></span>，我去年考场上可是胡了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>h</mi></mrow><annotation encoding="application/x-tex">3h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">3</span><span class="mord mathnormal">h</span></span></span></span> 然后 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>p</mi><mi>t</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">0pts</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mord mathnormal">pt</span><span class="mord mathnormal">s</span></span></span></span> 呀。不说别的，这一年码力至少有长进。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span> </span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> int long long</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> pis pair<span class="hljs-string">&lt;int,string&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> mk make_pair</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> se second</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> fi first</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> Max=<span class="hljs-number">140</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> res=<span class="hljs-number">0</span>,v=<span class="hljs-number">1</span>;<br>	<span class="hljs-type">char</span> c=<span class="hljs-built_in">getchar</span>();<br>	<span class="hljs-keyword">while</span>(c&lt;<span class="hljs-string">&#x27;0&#x27;</span>||c&gt;<span class="hljs-string">&#x27;9&#x27;</span>)&#123;v=(c==<span class="hljs-string">&#x27;-&#x27;</span>?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>);c=<span class="hljs-built_in">getchar</span>();&#125;<br>	<span class="hljs-keyword">while</span>(c&gt;=<span class="hljs-string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="hljs-string">&#x27;9&#x27;</span>)&#123;res=(res&lt;&lt;<span class="hljs-number">3</span>)+(res&lt;&lt;<span class="hljs-number">1</span>)+(c^<span class="hljs-number">48</span>);c=<span class="hljs-built_in">getchar</span>();&#125;<br>	<span class="hljs-keyword">return</span> res*v;<br>&#125;<br><br>map&lt;string,<span class="hljs-type">int</span>&gt;Id;  <span class="hljs-comment">//将jgt的名称转换为定义的顺序 </span><br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Str</span>&#123;<br>	<br>	string Nam;<br>	<span class="hljs-type">int</span> num,len,lim;     <br>	<span class="hljs-type">int</span> str[Max],end[Max];<br>	pis nam[Max];<br>	<span class="hljs-comment">//Nam表示其名字 </span><br>	<span class="hljs-comment">//num元素个数，len结构体长度，lim对齐要求 </span><br>	<span class="hljs-comment">//nam[i]表示第i个元素的编号和名字，若小于等于4表示为基本元素</span><br>	<span class="hljs-comment">//str[i]表示第i个元素的起始位置 </span><br>	<span class="hljs-comment">//end[i]表示第i个元素的终止位置</span><br>&#125;st[Max]; <br><br><span class="hljs-type">int</span> tot;<br><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Declar</span><span class="hljs-params">()</span></span>&#123;<br>	++tot;<br>	cin&gt;&gt;st[tot].Nam;<br>	Id[st[tot].Nam]=tot;st[tot].num=<span class="hljs-built_in">read</span>();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=st[tot].num;++i)&#123;<br>		string II;cin&gt;&gt;II;<br>		st[tot].nam[i].fi=Id[II];<br>		cin&gt;&gt; st[tot].nam[i].se;<br>		<span class="hljs-type">int</span> x=Id[II];<br>		<span class="hljs-type">int</span> b=((-st[tot].len)%st[x].lim+st[x].lim)%st[x].lim;<br>		st[tot].len+=b;st[tot].str[i]=st[tot].len;<br>		st[tot].len+=st[x].len;st[tot].end[i]=st[tot].str[i]+st[x].len<span class="hljs-number">-1</span>;<br>		st[tot].lim=<span class="hljs-built_in">max</span>(st[tot].lim,st[x].lim);<br>	&#125;<br>	<span class="hljs-type">int</span> b=((-st[tot].len)%st[tot].lim+st[tot].lim)%st[tot].lim;<br>	st[tot].len+=b;<br>	cout &lt;&lt; st[tot].len &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span> &lt;&lt; st[tot].lim &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pre</span><span class="hljs-params">()</span></span>&#123;<br>	Id[<span class="hljs-string">&quot;byte&quot;</span>]=++tot;st[tot].lim=<span class="hljs-number">1</span>;st[tot].num=<span class="hljs-number">1</span>;st[tot].nam[<span class="hljs-number">1</span>]=<span class="hljs-built_in">mk</span>(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>);st[tot].str[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;st[tot].end[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;st[tot].len=<span class="hljs-number">1</span>;<br>	Id[<span class="hljs-string">&quot;short&quot;</span>]=++tot;st[tot].lim=<span class="hljs-number">2</span>;st[tot].num=<span class="hljs-number">1</span>;st[tot].nam[<span class="hljs-number">1</span>]=<span class="hljs-built_in">mk</span>(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>);st[tot].str[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;st[tot].end[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;st[tot].len=<span class="hljs-number">2</span>;<br>	Id[<span class="hljs-string">&quot;int&quot;</span>]=++tot;st[tot].lim=<span class="hljs-number">4</span>;st[tot].num=<span class="hljs-number">1</span>;st[tot].nam[<span class="hljs-number">1</span>]=<span class="hljs-built_in">mk</span>(<span class="hljs-number">3</span>,<span class="hljs-number">0</span>);st[tot].str[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;st[tot].end[<span class="hljs-number">1</span>]=<span class="hljs-number">3</span>;st[tot].len=<span class="hljs-number">4</span>;<br>	Id[<span class="hljs-string">&quot;long&quot;</span>]=++tot;st[tot].lim=<span class="hljs-number">8</span>;st[tot].num=<span class="hljs-number">1</span>;st[tot].nam[<span class="hljs-number">1</span>]=<span class="hljs-built_in">mk</span>(<span class="hljs-number">4</span>,<span class="hljs-number">0</span>);st[tot].str[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;st[tot].end[<span class="hljs-number">1</span>]=<span class="hljs-number">7</span>;st[tot].len=<span class="hljs-number">8</span>;<br>&#125;<br><br><br><span class="hljs-type">int</span> Now;<span class="hljs-comment">//表示定义时的位置</span><br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Pos</span>&#123;<br>	<span class="hljs-type">int</span> id,str,end;<br>	string nam;<br>	<span class="hljs-comment">//id表示其类型，str表示其起始位置，end为终止位置 </span><br>	<span class="hljs-comment">//nam为姓名 </span><br>&#125;;<br><br>vector&lt;Pos&gt;que;<br><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>	string Nam,nam;<br>	cin&gt;&gt; Nam&gt;&gt;nam;<br>	Pos now;<br>	now.id=Id[Nam];now.nam=nam;<br>	<span class="hljs-type">int</span> Lim=st[now.id].lim;<br>	<span class="hljs-type">int</span> d=(((-Now)%Lim+Lim)%Lim);<br>	Now+=d;now.str=Now;now.end=Now+st[now.id].len<span class="hljs-number">-1</span>;<br>	Now+=st[now.id].len;<br>	que.<span class="hljs-built_in">push_back</span>(now);<br>	cout &lt;&lt; now.str &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>&#125;<br><br><br>queue&lt;string&gt;ans; <br><span class="hljs-type">int</span> tag=<span class="hljs-number">0</span>;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Work4</span><span class="hljs-params">(<span class="hljs-type">int</span> id,<span class="hljs-type">int</span> str,<span class="hljs-type">int</span> len)</span></span>&#123;<span class="hljs-comment">//id表示是哪个jgt，st表示当前的起始位置，len表示询问的终止位置 </span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=st[id].num;++i)&#123;<br>		<span class="hljs-keyword">if</span>(st[id].str[i]+str&gt;len)&#123;tag=<span class="hljs-number">1</span>;<span class="hljs-keyword">return</span>;&#125;<br>		<span class="hljs-keyword">if</span>(st[id].end[i]+str&gt;=len)&#123;<br>			ans.<span class="hljs-built_in">push</span>(st[id].nam[i].se);<br>			<span class="hljs-keyword">if</span>(st[id].nam[i].fi&lt;=<span class="hljs-number">4</span>)<span class="hljs-keyword">return</span>;<br>			<span class="hljs-built_in">Work4</span>(st[id].nam[i].fi,str+st[id].str[i],len);<br>			<span class="hljs-keyword">return</span>;<br>		&#125;<br>	&#125;<br>	tag=<span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Query4</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> num=<span class="hljs-built_in">read</span>();<br>	tag=<span class="hljs-number">0</span>;<span class="hljs-keyword">while</span>(!ans.<span class="hljs-built_in">empty</span>())ans.<span class="hljs-built_in">pop</span>();<br>	<span class="hljs-type">int</span> z=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:que)&#123;<br>		<span class="hljs-keyword">if</span>(i.str&gt;num)&#123;cout &lt;&lt; <span class="hljs-string">&quot;ERR\n&quot;</span>;<span class="hljs-keyword">return</span>;&#125;<br>		<span class="hljs-keyword">if</span>(i.end&gt;=num)&#123;<br>			z=<span class="hljs-number">1</span>;<br>			ans.<span class="hljs-built_in">push</span>(i.nam);<br>			<span class="hljs-keyword">if</span>(i.id&lt;=<span class="hljs-number">4</span>)<span class="hljs-keyword">break</span>;<br>			<span class="hljs-built_in">Work4</span>(i.id,i.str,num);<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(tag||!z)cout &lt;&lt; <span class="hljs-string">&quot;ERR\n&quot;</span> ;<br>	<span class="hljs-keyword">else</span> &#123;<br>		<span class="hljs-keyword">while</span>(!ans.<span class="hljs-built_in">empty</span>())&#123;<br>			cout &lt;&lt; ans.<span class="hljs-built_in">front</span>();ans.<span class="hljs-built_in">pop</span>();<br>			<span class="hljs-keyword">if</span>(!ans.<span class="hljs-built_in">empty</span>())cout &lt;&lt; <span class="hljs-string">&quot;.&quot;</span>;<br>		&#125;<br>		cout &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>	&#125;<br>	<br>&#125;<br><br>queue&lt;string&gt;Que;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Work3</span><span class="hljs-params">(<span class="hljs-type">int</span> id,<span class="hljs-type">int</span> str)</span></span>&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=st[id].num;++i)&#123;<br>		<span class="hljs-keyword">if</span>(st[id].nam[i].se==Que.<span class="hljs-built_in">front</span>())&#123;<br>			Que.<span class="hljs-built_in">pop</span>();<br>			<span class="hljs-keyword">if</span>(!Que.<span class="hljs-built_in">size</span>())cout &lt;&lt; str+st[id].str[i] &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>			<span class="hljs-keyword">else</span> <span class="hljs-built_in">Work3</span>(st[id].nam[i].fi,str+st[id].str[i]);<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Query3</span><span class="hljs-params">()</span></span>&#123;<br>	string nam;<br>	cin&gt;&gt; nam;<br>	<span class="hljs-type">int</span> n=nam.<span class="hljs-built_in">size</span>();<br>	string a=<span class="hljs-string">&quot;&quot;</span>,b=<span class="hljs-string">&quot;&quot;</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;++i)&#123;<br>		<span class="hljs-keyword">if</span>(nam[i]!=<span class="hljs-string">&#x27;.&#x27;</span>)a=a+nam[i];<br>		<span class="hljs-keyword">else</span> Que.<span class="hljs-built_in">push</span>(a),a=b;<br>	&#125;<br>	Que.<span class="hljs-built_in">push</span>(a);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:que)&#123;<br>		<span class="hljs-keyword">if</span>(i.nam==Que.<span class="hljs-built_in">front</span>())&#123;<br>			Que.<span class="hljs-built_in">pop</span>();<br>			<span class="hljs-keyword">if</span>(!Que.<span class="hljs-built_in">size</span>())cout &lt;&lt; i.str &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>			<span class="hljs-keyword">else</span> <span class="hljs-built_in">Work3</span>(i.id,i.str);<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>&#125;<br><br><br><br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> n=<span class="hljs-built_in">read</span>();<span class="hljs-built_in">pre</span>();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;++i)&#123;<br>		<span class="hljs-type">int</span> op=<span class="hljs-built_in">read</span>();<br>		<span class="hljs-keyword">if</span>(op==<span class="hljs-number">1</span>)<span class="hljs-built_in">Declar</span>();<br>		<span class="hljs-keyword">if</span>(op==<span class="hljs-number">2</span>)<span class="hljs-built_in">init</span>();<br>		<span class="hljs-keyword">if</span>(op==<span class="hljs-number">3</span>)<span class="hljs-built_in">Query3</span>();<br>		<span class="hljs-keyword">if</span>(op==<span class="hljs-number">4</span>) <span class="hljs-built_in">Query4</span>();<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">具体思路如下：</span><br><span class="hljs-comment">将基本类型也看作结构体，那么定义就是结构体套结构体，</span><br><span class="hljs-comment">对每个jgt开一个结构体维护，方便处理。 </span><br><span class="hljs-comment">*/</span><br></code></pre></td></tr></table></figure>
+<p>中文睡在机房，睡不了一点，又有点晕车，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>e</mi><mi>b</mi><mi>u</mi><mi>f</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">Debuff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal">e</span><span class="mord mathnormal">b</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span></span></span></span> 叠满。</p>
+<h2 id="Day-1下午">Day 1下午</h2>
+<p>座位左后方有一个水管，不停的哗哗哗的流水，补觉失败，只好起来打缺省源，写了<code>modint</code>（但是没用上）。</p>
+<p>14:30 开题，10分钟秒了 T1。</p>
+<p>转眼看T2，这么这么萌，第一问直接前缀和，第二问就是一个简单的贪心，15：20写完提交。</p>
+<p>50分钟两道题，优势在我，赶紧看 T3，一眼 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">dp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span></span></span></span>，考虑优化，想到了一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的，开始码。写了4棵线段树，花了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>h</mi></mrow><annotation encoding="application/x-tex">2h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal">h</span></span></span></span>，中间假了好几次。还好最后得到的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>k</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">4kb</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mord mathnormal">b</span></span></span></span> 代码过了大样例，随即上拍。</p>
+<p>看 T4，会不了一点，部分分也不想打就去检查前3题。</p>
+<p>跑了 T3 的极限数据，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">3s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mord mathnormal">s</span></span></span></span>，这么慢？发现一次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">dp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span></span></span></span> 转移使用了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn></mrow><annotation encoding="application/x-tex">12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span> 次线段树操作，不 T 才怪呢。可能是看长题目太久了，身体感到不适，有点想吐就不打算改了，而且时间不多了，重新推式子也来不及了。</p>
+<p>最后预估 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>200</mn><mo>+</mo></mrow><annotation encoding="application/x-tex">200+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">200</span><span class="mord">+</span></span></span></span> 遗憾离场。</p>
+<p>除了考场，问了同机房的同学，基本都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>300</mn><mo>+</mo></mrow><annotation encoding="application/x-tex">300+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">300</span><span class="mord">+</span></span></span></span>。我好菜，是不是要退役了QAQ。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2026/06/17/CSP2024游记/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>gcx</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年6月17日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/06/17/dp/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/06/17/CSP2024%20%E6%B8%B8%E8%AE%B0gcx/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
